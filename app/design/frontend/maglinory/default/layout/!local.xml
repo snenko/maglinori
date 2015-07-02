@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<reference name="footer">
+		<block type="core/template" 
+				template="page/html/footer.links.phtml" 
+				name="footer_links" 
+				as="footer_links" />
+	</reference>
+	
+</layout>
