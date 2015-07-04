@@ -10597,3 +10597,15 @@ div.calendar table td.button {
   color: inherit;
   text-transform: none;
 }
+/* ============================================ *
+ * maglinory
+ * ============================================ */
+.block-title {
+    border-top: none;
+}
+.footer {
+    border-top: none;
+}
+address.copyright {
+    border-top: none;
+}

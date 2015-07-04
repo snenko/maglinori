@@ -9,7 +9,16 @@
 				name="footer_menu_links" 
 				as="footer_menu_links" />
 	</reference>
-	
+
+    <reference name="head">
+        <block type="core/template"
+               template="page/template/head.menu.links.phtml"
+               name="head_menu_links"
+               as="head_menu_links" />
+    </reference>
+
+    <remove name="welcome" />
+
 </default>
 
 </layout>
