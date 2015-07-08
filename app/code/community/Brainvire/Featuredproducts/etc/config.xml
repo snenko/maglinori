@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--
+@author Brainvire Team 
+@copyright Brainvire 
+@package Brainvire_Featuredproducts 
+-->
+<config>
+    <modules>
+        <Brainvire_Featuredproducts>
+            <version>1.3.0</version>
+        </Brainvire_Featuredproducts>
+    </modules>
+    <frontend>
+        <routers>
+            <featuredproducts>
+                <use>standard</use>
+                <args>
+                    <module>Brainvire_Featuredproducts</module>
+                    <frontName>featured-products</frontName>
+                </args>
+            </featuredproducts>
+        </routers>
+        <layout>
+            <updates>
+                <featuredproducts>
+                    <file>brainvire/brainvirefeaturedproducts.xml</file>
+                </featuredproducts>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Brainvire_Featuredproducts>
+                    <files>
+                        <default>Featuredproducts.csv</default>
+                    </files>
+                </Brainvire_Featuredproducts>
+            </modules>
+        </translate>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <featuredproducts before="Mage_Adminhtml">Brainvire_Featuredproducts_Adminhtml</featuredproducts>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+       
+    <global>
+        <blocks>
+            <featuredproducts>
+                <class>Brainvire_Featuredproducts_Block</class>
+            </featuredproducts>
+        </blocks>
+
+        <helpers>
+            <featuredproducts>
+                <class>Brainvire_Featuredproducts_Helper</class>
+            </featuredproducts>
+        </helpers>
+
+        <models>
+            <featuredproducts>
+                <class>Brainvire_Featuredproducts_Model</class>
+            </featuredproducts>
+        </models>
+
+        <resources>
+            <featuredproducts_setup>
+                <setup>
+                    <module>Brainvire_Featuredproducts</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </featuredproducts_setup>
+
+            <featuredproducts_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </featuredproducts_write>
+            <featuredproducts_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </featuredproducts_read>
+        </resources>
+    </global>
+    <default>
+        <featuredproducts>
+            <general>
+                <heading>Featured Products</heading>
+                <heading_block>Featured Products</heading_block>
+                <meta_title>Featured Products</meta_title>
+                <meta_description>Check out our great collection of Featured products</meta_description>
+                <meta_keywords>featured, products</meta_keywords>
+                <product_sort_by>random</product_sort_by>
+                <number_of_items>5</number_of_items>
+                <number_of_items_per_row>2</number_of_items_per_row>
+                <layout>two_columns_right</layout>
+            </general>
+            <displayoption>
+                <customcode>{{block type="featuredproducts/listing"}}</customcode>
+            </displayoption>
+        </featuredproducts>
+    </default>
+</config>

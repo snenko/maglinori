@@ -1,0 +1,186 @@
+<?php
+/**
+ * @category  Brainvire
+ * @package   Brainvire_Featuredproducts
+ * @copyright Copyright (c) 2015 Brainvire Infotech Pvt Ltd
+ */
+?>
+<script type="text/javascript" src="<?php echo
+    Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'js/brainvire/jquery-1.11.2.min.js' ?>"></script>
+
+
+<?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+    <?php $iViewBy = Mage::getStoreConfig("featuredproducts/general/product_view_by"); ?>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->getSkinUrl('css/brainvire/bv_featuredproducts.css') ?>"/>
+
+
+
+    <?php if ($iViewBy == "list" || $iViewBy == "grid"): ?>
+
+        <div class="grid_list">
+            <h3 class="fp_gl"><?php echo $this->__($this->getBlockLabel()) ?></h3>
+            <table class="mainSlidrer" border="0" cellspacing="5" cellpadding="0">
+
+                <tbody>
+                <?php $i = 0;
+                $row = 0;
+                foreach ($_products->getItems() as $_product): ?>
+
+                    <?php if ($i == 0): ?>
+                        <?php $row++; ?>
+                        <tr class="<?php echo (($row % 2) > 0) ? 'odd' : 'even' ?>">
+                    <?php endif; ?>
+                    <td>
+
+                        <div class="productContainer">
+
+                            <div class="imgContainer">
+                                <a href="<?php echo $_product->getProductUrl() ?>" style="position:relative;"
+                                   title="<?php echo $this->htmlEscape($_product->getName()) ?>">
+                                    <span class="new" style="right: 3px;"></span>
+                                    <img class="product-img"
+                                         src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')
+                                             ->resize(80, 80) ?>"
+                                         alt="<?php echo $this->htmlEscape($_product->getName()) ?>"/>
+                                </a>
+                            </div>
+
+                            <div class="product-description">
+                                <p>
+                                    <a href="<?php echo $_product->getProductUrl() ?>"
+                                       title="<?php echo $this->htmlEscape($_product->getName()) ?>)">
+                                        <?php echo $this->htmlEscape($_product->getName()) ?>
+                                    </a>
+                                </p>
+                                <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                                <?php echo $this->getPriceHtml($_product, true, '-new') ?>
+
+                                <div class="btnConter">
+                                    <?php if ($_product->isSaleable()): ?>
+                                        <button type="button" class="button btn-cart"
+                                                onclick="setLocation('<?php echo $this->getAddToCartUrl(
+                                                    $_product
+                                                ) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span>
+                                        </button>
+                                    <?php else: ?>
+                                        <div class="out-of-stock"><?php echo $this->__('Out of stock') ?></div>
+                                    <?php endif; ?>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+
+                    <?php $i++;
+                    if ($i == $this->getItemsPerRow()): ?>
+                        <?php $i = 0; ?>
+                        </tr>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
+
+                </tbody>
+
+            </table>
+        </div>
+        <div style="clear:both"></div>
+    <?php else: ?>
+
+        <link rel="stylesheet" type="text/css"
+              href="<?php echo $this->getSkinUrl('css/brainvire/element.css') ?>"/>
+        <link rel="stylesheet" type="text/css"
+              href="<?php echo $this->getSkinUrl('css/brainvire/hexagon.css') ?>"/>
+
+        <link rel="stylesheet" type="text/css"
+              href="<?php echo $this->getSkinUrl('css/brainvire/default_skin.css') ?>"/>
+
+        <script type="text/javascript" src="<?php echo
+            Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'js/brainvire/jquery.sky.carousel-1.0.2.min.js' ?>"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                var carousel = $('#your-carousel-id').carousel({
+                    itemWidth: 243,
+                    itemHeight: 236,
+                    distance: 75,
+                    selectedItemDistance: 120,
+                    selectedItemZoomFactor: 1,
+                    unselectedItemZoomFactor: 0.34,
+                    unselectedItemAlpha: 0.6,
+                    motionStartDistance: 170,
+                    topMargin: 80,
+                    gradientStartPoint: 0.35,
+                    gradientOverlayColor: "#f5f5f5",
+                    gradientOverlaySize: 190,
+//                reflectionDistance: 1,
+//                reflectionAlpha: 0.35,
+//                reflectionVisible: true,
+//                reflectionSize: 70,
+                    selectByClick: true
+//        loop: true
+                });
+
+                //    carousel.on('itemSelected.sc', function(evt) {});
+
+            });
+
+        </script>
+
+        <div class="container">
+            <!-- Project Title -->
+            <div class="sixteen columns">
+                <h4 class="headline">Default Skin Variation1</h4>
+
+                <div id="your-carousel-id" class="sky-carousel">
+                    <div class="sky-carousel-wrapper">
+                        <div class="pan"></div>
+                        <ul class="sky-carousel-container">
+                            <?php foreach ($_products->getItems() as $_product): ?>
+                                <?php //------------------------- ?>
+
+                                <?php if ($ii == 0): ?>
+                                    <li>
+                                <?php endif; ?>
+
+                                <div class="prew-box">
+                                    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(236, 236) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" alt="" />
+                                    <div class="figure-sixangle"><?php echo $this->getPriceHtml($_product, true, '-new') ?></div>
+                                </div>
+
+                                <div class="sc-content">
+                                    <h2><?php echo $this->htmlEscape($_product->getName()) ?></h2>
+                                    <p><a href="#"></a></p>
+                                </div>
+
+                                <?php $ii++; ?>
+
+                                <?php if ($ii == $this->getItemsPerRow()): ?>
+                                    <?php $ii = 0; ?>
+                                    </li>
+                                <?php endif; ?>
+
+                                <?php //------------------------- ?>
+
+
+                            <?php endforeach; ?>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <?php $ii = 0 ?>
+
+
+    <?php endif; ?>
+<?php endif; ?>
+
+						

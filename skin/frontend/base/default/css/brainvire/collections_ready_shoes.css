@@ -1,0 +1,99 @@
+/**
+* @category Brainvire
+* @package Brainvire_Featuredproducts
+* @copyright Copyright (c) 2015 snenko
+* @description created for change base modeule to maglinori module
+*/
+.sliderProduct .btnConter {
+    visibility: hidden !important;
+}
+
+.imgContainer span.new {
+    visibility: hidden !important;
+}
+
+#slider ul li .sliderProduct {
+    border: none !important;
+}
+
+#slider ul li .sliderProduct a img {
+    border: none !important;
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(grayscale.svg#greyscale); /* Firefox 4+ */
+    filter: gray; /* IE 6-9 */
+    width: 150px !important;
+    height: 150px !important;
+}
+
+#slider ul li .sliderProduct a img.active {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: none;
+
+    /*width: 365px !important;*/
+    /*height: 365px !important;*/
+
+}
+
+h3.fp_gl {
+    float: none;
+    text-align: center;
+    border-top: 1px solid #AFAFAF;
+    border-bottom: 1px solid #AFAFAF;
+    display: inline;
+}
+
+h3.fp_gl {
+}
+
+div#container {
+    float: none;
+}
+
+div#content {
+    width: 100%;
+}
+
+div#slider {
+    width: 100% !important;
+    /*float: none;*/
+}
+
+.bx-viewport {
+    /*height: 100% !important;*/
+}
+
+.blocktitle {
+    text-align: center;
+}
+
+/*#slider ul.bxslider li {*/
+    /*float: left;*/
+    /*list-style: none;*/
+    /*position: relative;*/
+/*}*/
+
+.bx-viewport {
+    margin: auto;
+    border: none !important;
+    background: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+img.product-img {
+    position: relative;
+    top: 44px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    margin-left: -60px;
+    margin-right: -60px;
+}

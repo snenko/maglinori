@@ -1,0 +1,16 @@
+#your-carousel-id .sky-carousel-container .sc-selected {
+  margin-top: -50px;
+}
+#your-carousel-id .sky-carousel-container .sc-selected .prew-box {
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  padding: 33px;
+  margin-left: -30px;
+  padding-bottom: 0px;
+}
+#your-carousel-id .sky-carousel-container .sc-selected .figure-sixangle {
+  visibility: visible;
+}
+.figure-sixangle {
+  visibility: hidden;
+}

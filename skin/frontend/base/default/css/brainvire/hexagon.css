@@ -1,0 +1,45 @@
+/**
+ * <div class="figure"></div>
+**/
+/*****************************************************/
+.figure-sixangle {
+  top: 21.5px;
+  left: 43px;
+  width: 150px;
+  height: 33px;
+  position: relative;
+  border-top: 5px double #d9d9d9;
+  border-bottom: 5px double #d9d9d9;
+  background-color: #ffffff;
+}
+.figure-sixangle:before {
+  content: '';
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-color: #ffffff;
+  -webkit-transform: rotateZ(45deg) skew(8deg, 8deg);
+  top: 3px;
+  left: -16px;
+  border-left: 5px double #d9d9d9;
+  border-bottom: 5px double #d9d9d9;
+}
+.figure-sixangle:after {
+  content: '';
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-color: #ffffff;
+  -webkit-transform: rotateZ(45deg) skew(8deg, 8deg);
+  top: 3px;
+  right: -16px;
+  border-top: 5px double #d9d9d9;
+  border-right: 5px double #d9d9d9;
+}
+.price-box {
+  text-align: center;
+  position: relative;
+  top: 6px;
+  margin: 0;
+  padding: 0;
+}

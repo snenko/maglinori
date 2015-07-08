@@ -1,0 +1,68 @@
+// Input LESS here, strike 'Ctrl|Command+Enter' to compile.
+/**
+ * <div class="figure"></div>
+**/
+
+//@import "vars.less";
+
+@parrent-padding: 33px;
+@parent-width: 236px;//;303px;//243px;
+
+@width:150px;
+@height:33px;
+@bg :#fff;
+
+@border-color:#d9d9d9;
+@border-width:5px;
+@wings-top:3px;
+
+@border: @border-width double @border-color;
+@wings-lr:(-1) * round(((@height/2) * tan(45deg)));
+@wings-hw: round((@height/2) / sin(45deg));
+
+@top: (@height/2) + @border-width;
+@left: (@parent-width - @width)/2;
+
+/*****************************************************/
+
+.figure-sixangle {
+  top: @top;
+  left: @left;
+  width: @width;
+  height: @height;
+  position: relative;
+  border-top: @border;
+  border-bottom: @border;
+  background-color: @bg;
+}
+.figure-sixangle:before {
+  content: '';
+  position: absolute;
+  width: @wings-hw;
+  height: @wings-hw;
+  background-color: @bg;
+  -webkit-transform: rotateZ(45deg) skew(8deg, 8deg);
+  top: @wings-top;
+  left: @wings-lr;
+  border-left: @border;
+  border-bottom: @border;
+}
+.figure-sixangle:after {
+  content: '';
+  position: absolute;
+  width: @wings-hw;
+  height: @wings-hw;
+  background-color: @bg;
+  -webkit-transform: rotateZ(45deg) skew(8deg, 8deg);
+  top: @wings-top;
+  right: @wings-lr;
+  border-top: @border;
+  border-right: @border;
+}
+.price-box {
+  text-align: center;
+  position: relative;
+  top: 6px;
+  margin: 0;
+  padding: 0;
+}

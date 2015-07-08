@@ -1,0 +1,55 @@
+/**
+* @category Brainvire 
+* @package Brainvire_Featuredproducts 
+* @copyright Copyright (c) 2015 Brainvire Infotech Pvt Ltd
+*/
+
+.std h3 {
+    font-size: 15px
+}
+
+.std table {
+    border-spacing: 5px !important
+}
+
+.std table td .productContainer {
+    text-align: center
+}
+
+.std table td .productContainer .imgContainer {
+    width: 80px;
+    margin: 0 auto;
+    border: 1px solid #999
+}
+
+.std table td .productContainer .product-description {
+    min-height: 100px;
+    position: relative
+}
+
+.std table td .productContainer .product-description .price-box {
+    padding-bottom: 30px
+}
+
+.btnConter {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0
+}
+
+.std table td .productContainer .product-description .btnConter span span {
+    border: none
+}
+
+.productContainer .imgContainer .product-description {
+    text-align: center !important
+}
+
+.productContainer {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px
+}

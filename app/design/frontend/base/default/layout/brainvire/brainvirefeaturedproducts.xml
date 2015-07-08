@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+@author Brainvire Team 
+@copyright Brainvire 
+@package Brainvire_Featuredproducts 
+-->
+<layout version="0.1.0">
+
+    <default>
+	  <reference name="head">
+			<action method="addCss"><stylesheet>css/brainvire/bv_style.css</stylesheet></action>
+			<action method="addCss"><stylesheet>css/brainvire/collections_ready_shoes.css</stylesheet></action>
+
+      </reference>
+      <reference name="footer_links">
+            <action method="addLink" translate="label title" module="featuredproducts"><label>Featured Products</label><url>featured-products</url><title>Featured Products</title><prepare>true</prepare></action>
+        </reference>
+    </default>
+
+
+    <featuredproducts_index_index>
+        <reference name="content">
+            <block type="core/template" name="category.products" template="brainvire/featuredproducts/view.phtml">
+                <block type="featuredproducts/product_list" name="featured_product_list" as="featured_product_list" template="brainvire/featuredproducts/list.phtml">
+                    <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                            <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                    </block>
+                    <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+                </block>
+            </block>
+        </reference>
+    </featuredproducts_index_index>
+
+     <cms_index_index> <!-- Home Page -->
+        <reference name="content"> 
+            <block type="core/template" name="category.products" after="content" template="brainvire/featuredproducts/view.phtml">
+		        <block type="featuredproducts/listing" name="featured_product_list" as="featured_product_homepagelist" template="brainvire/featuredproducts/block_featured_products.phtml" />
+            </block> 
+		
+        </reference> 
+    	<reference name="category.products">
+    		<action method="setTemplate"><template>brainvire/featuredproducts/homepageview.phtml</template></action>		
+    	</reference>
+    </cms_index_index>
+
+    <catalog_product_view> <!-- Product Page -->
+        <reference name="content"> 
+            <block type="core/template" name="category.products" after="content" template="brainvire/featuredproducts/view.phtml">
+        <block type="featuredproducts/listing" name="featured_product_list" as="featured_product_productpagelist" template="brainvire/featuredproducts/block_featured_products.phtml" />
+            </block> 
+        
+        </reference> 
+        <reference name="category.products">
+            <action method="setTemplate"><template>brainvire/featuredproducts/productpageview.phtml</template></action>     
+        </reference>
+    </catalog_product_view>
+</layout>

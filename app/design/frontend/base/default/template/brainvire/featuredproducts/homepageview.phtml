@@ -1,0 +1,14 @@
+<?php
+/**
+* @category Brainvire 
+* @package Brainvire_Featuredproducts 
+* @copyright Copyright (c) 2015 Brainvire Infotech Pvt Ltd
+*/ ?>
+<?php $a= Mage::getStoreConfig('featuredproducts/displayoption/homepage');
+	if($a): ?>
+<div class="category-head">
+	<h2><?php  ?></h2>
+</div>
+<?php echo $this->getChildHtml('featured_product_homepagelist'); 
+	endif;
+?>

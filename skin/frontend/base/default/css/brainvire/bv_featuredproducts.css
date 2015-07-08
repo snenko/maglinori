@@ -1,0 +1,209 @@
+/**
+* @category Brainvire 
+* @package Brainvire_Featuredproducts 
+* @copyright Copyright (c) 2015 Brainvire Infotech Pvt Ltd
+*/
+.new {
+     position: absolute;
+     width: 44px;
+     background: url(../../images/featuredproducts/bv_new-1.gif) no-repeat;
+     height: 40px;
+     right: -4px;
+     z-index: 999
+ }
+
+.product-image {
+    position: relative
+}
+
+#nextBtn, #prevBtn, #slider1next, #slider1prev, .graphic {
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    text-indent: -8000px
+}
+
+#container {
+    margin: 0 auto 2em;
+    position: relative;
+    text-align: left;
+    background: #fff
+}
+
+#header {
+    height: 80px;
+    line-height: 80px;
+    background: #5DC9E1;
+    color: #fff
+}
+
+#content {
+    display: table;
+    position: relative;
+    width: 48%
+}
+
+#slider li, #slider ul, #slider2 li, #slider2 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#slider2 {
+    margin-top: 1em
+}
+
+#slider li, #slider2 li {
+    height: 230px;
+    overflow: hidden
+}
+
+#nextBtn, #prevBtn, #slider1next, #slider1prev {
+    display: block;
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 48px;
+    z-index: 1000
+}
+
+#nextBtn, #slider1next {
+    right: 0
+}
+
+#nextBtn a, #prevBtn a, #slider1next a, #slider1prev a {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 77px;
+    background: url(../../images/featuredproducts/bv_prev.gif) no-repeat
+}
+
+#nextBtn a, #slider1next a {
+    background: url(../../images/featuredproducts/bv_next.gif) no-repeat
+}
+
+.sliderProduct {
+    float: left;
+    padding: 0 13px;
+    width: 155px;
+    margin: 0 2px
+}
+
+caption, td, th {
+    padding-left: 10px;
+    width: 200px
+}
+
+.col-main {
+    float: left;
+    width: 78%
+}
+
+.mainSlidrer {
+    clear: both;
+    float: left
+}
+
+.fp_gl {
+    float: left
+}
+
+.fp_slider, .grid_list {
+    clear: both
+}
+
+#container {
+    clear: both;
+    float: left
+}
+
+.fp_s {
+    float: left
+}
+
+#slider {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    width: 513px !important;
+    margin: 0
+}
+
+#slider ul li .sliderProduct {
+    text-align: center;
+    border: 1px solid #999;
+    padding: 5px
+}
+
+#slider ul li .sliderProduct a img {
+    border: 1px solid #999
+}
+
+#slider ul li .sliderProduct .product-description {
+    min-height: 118px;
+    position: relative
+}
+
+#slider ul li .sliderProduct .product-description a {
+    font-size: 12px;
+    color: #1e7ec8;
+    display: block;
+    width: 100%
+}
+
+#slider ul li .sliderProduct .product-description .price-box {
+    padding-bottom: 30px
+}
+
+#slider ul li .sliderProduct .product-description .price, #slider ul li .sliderProduct .product-description .regular-price .price {
+    color: #c76200
+}
+
+#slider ul li .sliderProduct .product-description .btnConter span span {
+    border: none
+}
+
+@media only screen and (min-width:980px) and (max-width:1280px) {
+    #slider {
+        width: 833px !important;
+        float: left
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    #slider {
+        width: 88%;
+        margin: 0 43px
+    }
+}
+
+@media only screen and (min-width:640px) and (max-width:767px) {
+    #slider {
+        width: 424px !important;
+        margin: 0 80px !important
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:640px) {
+    #slider {
+        width: 211px;
+        margin: 0 60px
+    }
+
+    .sliderProduct {
+        width: 207px
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    #slider {
+        width: 211px;
+        margin: 0 40px
+    }
+
+    .sliderProduct {
+        width: 207px
+    }
+}

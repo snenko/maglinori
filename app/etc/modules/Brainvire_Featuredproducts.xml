@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+@author Brainvire Team 
+@copyright Brainvire 
+@package Brainvire_Featuredproducts 
+-->
+<config>
+    <modules>
+        <Brainvire_Featuredproducts>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Brainvire_Featuredproducts>
+    </modules>
+</config> 
